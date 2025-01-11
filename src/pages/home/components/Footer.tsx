@@ -11,7 +11,7 @@ function Footer(props: { isMobile: boolean }) {
         // backgroundColor: 'rgba(217, 119 ,6 ,0.8)' 
 
       }}
-      className={`bg-neutral-800 mt-10 ${
+      className={`bg-neutral-800 ${
         isMobile ? 'p-5 items-center flex-col' : 'p-10 justify-between '
       } text-gray-100 font-urbanist flex `}
     >

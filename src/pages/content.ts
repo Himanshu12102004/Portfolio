@@ -7,7 +7,7 @@ let workTabs = [
   'Neural Networks',
   'Tools',
 ];
-let techTabs = ['Languages', 'Database', 'Libraries & Frameworks'];
+let techTabs = ['Languages', 'Libraries & Frameworks', 'Database'];
 let technologies = {
   Languages: [
     {
