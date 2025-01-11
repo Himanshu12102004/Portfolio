@@ -48,7 +48,7 @@ function Works(props: { isMobile: boolean }) {
               transition={{ duration: 0.2 }}
             >
               <ProjectSet
-                data={blockContent[selected]}
+                data={blockContent[workTabs[selected]as keyof typeof blockContent]}
                 isMobile={isMobile}
               ></ProjectSet>
             </motion.div>

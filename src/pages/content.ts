@@ -1,15 +1,15 @@
 let workTabs = [
   'Graphics',
-  'Games',
   'Simulations',
+  'Games',
   'Products',
   'Fractals',
-  'Tools',
   'Neural Networks',
+  'Tools',
 ];
 let techTabs = ['Languages', 'Database', 'Libraries & Frameworks'];
-let technologies = [
-  [
+let technologies = {
+  Languages: [
     {
       txt: 'TypeScript',
       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png',
@@ -19,8 +19,8 @@ let technologies = [
       src: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
     },
     {
-      txt:"C",
-      src:"https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"
+      txt: 'C',
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png',
     },
     {
       txt: 'OpenGl Shading Language',
@@ -35,20 +35,18 @@ let technologies = [
       txt: 'Java',
       src: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/242px-Java_programming_language_logo.svg.png',
     },
-    
   ],
-  [
-
+  Database: [
     {
       txt: 'MongoDB',
       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/1024px-MongoDB_Logo.svg.png?20190626143224',
     },
-    {txt:"MySql",
-      src:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/1600px-MySQL_textlogo.svg.png?20210508081050"
+    {
+      txt: 'MySql',
+      src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/1600px-MySQL_textlogo.svg.png?20210508081050',
     },
-    
   ],
-  [
+  'Libraries & Frameworks': [
     {
       txt: 'WebGL',
       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/WebGL_Logo.svg/1024px-WebGL_Logo.svg.png',
@@ -73,12 +71,11 @@ let technologies = [
       txt: 'React',
       src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png',
     },
-
   ],
-];
+};
 
-let blockContent = [
-  [
+let blockContent = {
+  Graphics: [
     {
       head: 'Sketchy',
       image: ['sketchyDemo2.png'],
@@ -110,7 +107,7 @@ let blockContent = [
       linkText: 'Live Preview',
     },
   ],
-  [
+  Games: [
     {
       head: 'Obstacle Run 3D',
       image: ['obstacleRun.png'],
@@ -118,7 +115,7 @@ let blockContent = [
       textBelowImage: `A screenshot of the game play`,
       description:
         'Obstacle Run 3D, a game I created, uses Three.js for immersive 3D world rendering. Control a green box with arrow keys to dodge red obstacles while aiming for a high score. The game features a device-specific high score tracker, challenging players to continually beat their personal best in this engaging, fast-paced experience.',
-      tags: ['ThreeJS', 'JavaScript'],
+      tags: ['ThreeJS', 'JavaScript', 'HTML', 'CSS'],
       link: 'https://obstacle-run3d-himanshu.netlify.app/',
       linkText: 'Live Preview',
     },
@@ -128,7 +125,7 @@ let blockContent = [
       textBelowImage: `Screenshots showing the interface`,
 
       description:
-        'A real-time Tic Tac Toe game where you can create a room, share the code, and play with a friend on different devices. Enjoy seamless gameplay with real-time updates, disconnection notifications, and a "play again" request feature for rematches. Experience smooth, interactive fun anytime, anywhere!',
+        'A multiplayer real-time Tic Tac Toe game where you can create a room, share the code, and play with a friend on different devices. Enjoy seamless gameplay with real-time updates, disconnection notifications, and a "play again" request feature for rematches. Experience smooth, interactive fun anytime, anywhere!',
       tags: ['Nodejs', 'Express', 'React', 'Socketio', 'MongoDB'],
 
       link: 'https://tic-tac-toe-himanshu.netlify.app/',
@@ -141,21 +138,29 @@ let blockContent = [
       textBelowImage: `A screenshot of the game play`,
 
       description:
-        'Relive the nostalgia with Minesweeper, featuring three difficulty modes: Easy, Medium, and Hard. Compete with friends on a dynamic leaderboard and track your progress through a detailed score history. Challenge your logic and memory while enjoying a modern take on this timeless classic. Perfect for casual gaming or intense competitions!',
-      tags: ['Nodejs', 'Express', 'MongoDB'],
+        'Relive the Windows XP nostalgia with Minesweeper, featuring three difficulty modes: Easy, Medium, and Hard. Compete with friends on a dynamic leaderboard and track your progress through a detailed score history. Challenge your logic and memory while enjoying a modern take on this timeless classic. Perfect for casual gaming or intense competitions!',
+      tags: ['Nodejs', 'Express', 'MongoDB', 'HTML', 'CSS'],
 
       link: 'https://minesweeper-himanshu.netlify.app/',
       linkText: 'Live Preview',
     },
   ],
-  [
+  Simulations: [
     {
       head: "Conway's game of life",
       image: ['conwaysDemo3.png'],
       textBelowImage: `A screenshot of the spacefiller pattern`,
       description:
-        "Conway's Game of Life, a cellular automation simulation, featuring hardware-accelerated graphics on an infinite canvas. Enjoy unlimited zoom and pan, real-time rule customization, and hundreds of preloaded user templates. Upload your own starter templates and redefine the simulation rules instantly. Dive into a visually stunning and endlessly customizable cellular automaton experience!",
-      tags: ['WebGL', "GLSL",'TypeScript', 'Maths'],
+        "Conway's Game of Life, a cellular automation simulation, featuring hardware-accelerated graphics on an infinite canvas. Unlike typical Conway's fame of life simultaions here you can change the rules of the simulation and see the results in real time. Enjoy unlimited zoom and pan, real-time rule customization, and hundreds of preloaded user templates, you can upload your own starter templates for other users to use. Dive into a visually stunning and endlessly customizable cellular automaton experience!",
+      tags: [
+        'WebGL',
+        'GLSL',
+        'TypeScript',
+        'MongoDB',
+        'Express',
+        'Nodejs',
+        'Maths',
+      ],
       link: 'https://conways-game-of-life-himanshu.netlify.app/',
       linkText: 'Live Preview',
     },
@@ -164,7 +169,7 @@ let blockContent = [
       image: ['graphSim.png'],
       textBelowImage: `A screenshot showing a failed Hamiltonian Cycle`,
       description:
-        'The Graph Simulator, currently under development, helps visualize graph algorithms with GPU-accelerated graphics. It can simulate finding all Hamiltonian cycles and supports infinite zoom and pan. Calculations are processed in the backend for optimized performance. This tool provides an interactive way to explore and visualize graph algorithms in real time.',
+        'The Graph Simulator, currently under development, helps visualize graph algorithms with GPU-accelerated graphics. It can currently simulate finding all Hamiltonian cycles and supports infinite zoom and pan. Calculations are processed in the backend for optimized performance. This tool provides an interactive way to explore and visualize graph algorithms in real time, it gives you a feel of how the algorithm is working by using animations.',
       tags: ['WebGL', 'TypeScript', 'Algorithms', 'Data structures'],
       link: 'https://graph-sim-himanshu.netlify.app/',
       linkText: 'Live Preview',
@@ -180,7 +185,7 @@ let blockContent = [
       linkText: 'Live Preview',
     },
   ],
-  [
+  Products: [
     {
       head: 'SENTRY',
       image: ['sentry.png'],
@@ -200,7 +205,7 @@ let blockContent = [
       tags: ['Express', 'MongoDB', 'React', 'TypeScript', 'Nodejs', 'Socketio'],
     },
   ],
-  [
+  Fractals: [
     {
       head: 'Binary Tree',
       image: ['binaryTree.png'],
@@ -222,6 +227,16 @@ let blockContent = [
       linkText: 'Live Preview',
     },
     {
+      head: 'Julia Set',
+      image: ['julia.png'],
+      textBelowImage: `A screenshot showing julia set for z=-1.316+0.0073i`,
+      description:
+        "The Julia Set offers GPU-accelerated real-time rendering with stunning zooming and panning capabilities. This fractal exhibits intricate, self-similar patterns that evolve with each zoom level. Explore dynamic visualizations and manipulate the fractal's parameters, offering an immersive experience to study its mathematical beauty through limitless interaction and breathtaking detail.",
+      tags: ['WebGL', 'GLSL', 'JavaScript', 'Maths'],
+      link: 'https://julia-set-himanshu.netlify.app/',
+      linkText: 'Live Preview',
+    },
+    {
       head: 'Mandelbrot Set',
       image: ['mandelbrot.png'],
       textBelowImage: `A screenshot showing Mandelbrot set`,
@@ -231,18 +246,8 @@ let blockContent = [
       link: 'https://mandelbrot-explorer.netlify.app/',
       linkText: 'Live Preview',
     },
-    {
-      head: 'Julia Set',
-      image: ['juliaSet.png'],
-      textBelowImage: `A screenshot showing julia set for z=-1.316+0.0073i`,
-      description:
-        "The Julia Set offers GPU-accelerated real-time rendering with stunning zooming and panning capabilities. This fractal exhibits intricate, self-similar patterns that evolve with each zoom level. Explore dynamic visualizations and manipulate the fractal's parameters, offering an immersive experience to study its mathematical beauty through limitless interaction and breathtaking detail.",
-      tags: ['WebGL', 'GLSL', 'JavaScript', 'Maths'],
-      link: 'https://julia-set-himanshu.netlify.app/',
-      linkText: 'Live Preview',
-    },
   ],
-  [
+  Tools: [
     {
       head: 'Quine-McCluskey Logic Minimizer',
       image: ['QuineMcCluskey.png'],
@@ -268,7 +273,7 @@ let blockContent = [
       head: 'Grapher',
       image: ['grapher.png'],
       description:
-        'This is a function grapher for sine, cosine, and other mathematical functions allows users to visualize multiple graphs on a single canvas. It supports real-time plotting, scale adjustments, and overlays, enabling easy comparison of different functions.',
+        'This is a function grapher for mathematical functions which allows users to visualize multiple graphs on a single canvas. It supports real-time plotting, scale adjustments, and overlays, enabling easy comparison of different functions.',
       textBelowImage: 'Grapher graphing sin(x), tan(x) and tan<sup>-1</sup>(x)',
       link: 'https://grapher2-himanshu.netlify.app/',
       linkText: 'Live Preview',
@@ -280,7 +285,7 @@ let blockContent = [
       head: 'Mandelbrot function Analyzer',
       image: ['mandelbrotFunctionAnalyzer.png'],
       description:
-        "Mandelbrot function Analyzer visualizes the Mandelbrot function (f(z)=z^2+c) by taking mouse pointer coordinates as the complex value 'c'. It iterates through the Mandelbrot function, drawing the iteration points and connecting them with lines. This allows users to analyze the stability of the function, highlighting regions where the function converges or diverges, providing valuable insights into its behavior.",
+        "Mandelbrot function Analyzer visualizes the Mandelbrot function (f(z)=z<sup>2</sup>+c) by taking mouse pointer coordinates as the complex value 'c'. It iterates through the Mandelbrot function, drawing the iteration points and connecting them with lines. This allows users to analyze the stability of the function, highlighting regions where the function converges or diverges, providing valuable insights into its behavior.",
       textBelowImage:
         'Mandelbrot function Analyzer analyzing for c=0.052+0.613i',
       link: 'https://mandelbrot-function-analyzer-himanshu.netlify.app/',
@@ -289,7 +294,7 @@ let blockContent = [
       tags: ['WebGL', 'TypeScript', 'Maths'],
     },
   ],
-  [
+  'Neural Networks': [
     {
       head: 'MLP',
       image: ['mlp.png'],
@@ -301,5 +306,5 @@ let blockContent = [
       tags: ['C++', 'Algorithms', 'Data structures'],
     },
   ],
-];
+};
 export { workTabs, techTabs, technologies, blockContent };

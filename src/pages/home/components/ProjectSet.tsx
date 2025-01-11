@@ -39,8 +39,9 @@ function ProjectSet(props: Props) {
                       </div>
                       {!isMobile && <Tags tags={project.tags}></Tags>}
                     </div>
-                    <div className="font-urbanist  text-justify">
-                      {project.description}
+                    <div className="font-urbanist  text-justify" dangerouslySetInnerHTML={{
+                        __html: project.description,
+                      }}>
                     </div>
                   </div>
 

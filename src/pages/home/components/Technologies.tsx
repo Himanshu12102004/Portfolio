@@ -34,7 +34,7 @@ function Technologies(props: { isMobile: boolean }) {
             transition={{ duration: 0.2 }}
             layout 
           >
-            <TechSet technologies={technologies[selected]} />
+            <TechSet technologies={technologies[techTabs[selected] as keyof typeof technologies]} />
           </motion.div>
         </AnimatePresence>
       </motion.div>

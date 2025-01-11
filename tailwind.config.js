@@ -19,6 +19,8 @@ export default {
     'text-DataStructures',
     'text-Algorithms',
     'text-Canvas',
+    'text-HTML',
+    'text-CSS',
   ],
   theme: {
     extend: {
@@ -51,7 +53,9 @@ export default {
         Cplusplus: '#00599C',
         DataStructures: '#8B008B',
         Algorithms: '#F4A300',
-        Canvas: '#FFB6C1', // Charming light pink color
+        Canvas: '#FFB6C1',
+        HTML: '#E34F26', // Vibrant orange for HTML
+        CSS: '#1572B6', // Cool blue for CSS
       },
       animation: {
         fadeIn: 'fadeIn 500ms ease-out',
