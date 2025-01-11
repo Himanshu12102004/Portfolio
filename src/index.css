@@ -4,7 +4,7 @@
 @tailwind utilities;
 .bg {
   height: 100vh;
-  background-color: rgb(248, 226, 214);
+  background-color: rgb(254, 235, 224);
 }
 /* Hide scrollbars in WebKit browsers */
 .scrollbar-hidden::-webkit-scrollbar {

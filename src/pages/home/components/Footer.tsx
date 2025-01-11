@@ -7,8 +7,11 @@ function Footer(props: { isMobile: boolean }) {
   isMobile = true;
   return (
     <div
-      style={{ backgroundColor: 'rgba(217, 119 ,6 ,0.8)' }}
-      className={`bg-primary mt-10 ${
+      style={{ 
+        // backgroundColor: 'rgba(217, 119 ,6 ,0.8)' 
+
+      }}
+      className={`bg-neutral-800 mt-10 ${
         isMobile ? 'p-5 items-center flex-col' : 'p-10 justify-between '
       } text-gray-100 font-urbanist flex `}
     >
